@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #fff4f7;
+}
+
+#cake-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#cake {
+  width: 300px;
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background-color: pink;
+  position: absolute;
+  top: 40px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: hotpink;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#share-link {
+  margin-top: 15px;
+  font-weight: bold;
+}
