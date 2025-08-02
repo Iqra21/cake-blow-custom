@@ -1,31 +1,36 @@
-body {
-  text-align: center;
-  font-family: sans-serif;
-  background: #fbe7e7;
-}
-
-#cake-container {
-  position: relative;
-  display: inline-block;
-}
-
-#cake {
-  width: 300px;
-}
-
 .candle {
-  width: 10px;
-  height: 30px;
-  background: orange;
+  width: 30px;
+  height: 60px;
   position: absolute;
-  top: 50px;
+  top: 20px;
 }
 
 .flame {
-  width: 10px;
-  height: 10px;
-  background: yellow;
+  width: 15px;
+  height: 15px;
+  background: gold;
   border-radius: 50%;
   position: absolute;
-  top: -10px;
+  top: -20px;
+  left: 8px;
+  animation: flicker 0.2s infinite alternate;
+}
+
+.flame.big {
+  width: 25px;
+  height: 25px;
+  top: -30px;
+  left: 2px;
+}
+
+.digit-candle .digit {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background: #ff8c00;
+  padding: 4px 6px;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+  text-align: center;
 }
