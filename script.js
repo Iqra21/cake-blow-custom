@@ -43,13 +43,22 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
 function blowOutCandles() {
   document.querySelectorAll('.flame').forEach(f => f.style.display = 'none');
   song.play();
-  confetti({
-    particleCount: 200,
-    spread: 80,
-    origin: { y: 0.6 }
-  });
 
-  setTimeout(showBalloons, 2000);
+  // Keep firing confetti until banner appears
+  const confettiInterval = setInterval(() => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }, 500);
+
+  setTimeout(() => {
+    showBalloons();
+    clearInterval(confettiInterval);
+  }, 4000);
+
+  setTimeout(showMessage, 8000);
 }
 
 function showBalloons() {
@@ -60,7 +69,6 @@ function showBalloons() {
     balloon.style.left = `${Math.random() * 90}%`;
     balloon.style.setProperty('--color', randomColor());
 
-    // Add curled silver string
     const string = document.createElement('div');
     string.classList.add('string');
     balloon.appendChild(string);
@@ -68,11 +76,10 @@ function showBalloons() {
     container.appendChild(balloon);
   }
 }
-  setTimeout(showMessage, 8000);
-}
 
 function showMessage() {
-  document.getElementById('popup').style.display = 'block';
+  const banner = document.getElementById('banner');
+  banner.classList.add('show');
   song.volume = 0.1;
 }
 
