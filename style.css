@@ -139,3 +139,24 @@ h1 {
   z-index: 100;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+#banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  color: black;
+  padding: 40px 60px;
+  font-size: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#banner.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
