@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blow the Birthday Candles!</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎂 Blow the Cake!</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎂 Happy Birthday 🎉</h1>
+  <div id="app">
+    <h1>🎉 Happy Birthday! 🎂</h1>
+
+    <!-- Mode Selection -->
+    <div id="mode-select">
+      <button id="add-mode-btn">Add Candles</button>
+      <button id="blow-mode-btn">Blow Candles</button>
+    </div>
+
+    <!-- Cake Canvas -->
     <div id="cake-container">
-      <img id="cake" src="assets/cake.png" alt="Birthday Cake">
-      <div id="candles"></div>
+      <img src="https://i.imgur.com/8Km9tLL.png" id="cake" alt="Cake" />
+      <div id="candles-container"></div>
     </div>
-    <div class="buttons">
-      <button id="add-candle">Add Candle</button>
-      <button id="blow-candles">Blow Candles</button>
+
+    <!-- Share Link -->
+    <div id="share-container" style="display: none;">
+      <p>🎁 Share this link:</p>
+      <input type="text" id="share-link" readonly />
+      <button onclick="copyLink()">Copy</button>
     </div>
-    <audio id="birthday-audio" src="assets/birthday.mp3"></audio>
+
+    <!-- Confetti & Balloons -->
+    <canvas id="confetti-canvas"></canvas>
+    <div id="balloons-container"></div>
   </div>
 
-  <!-- Confetti script -->
-  <script src="confetti.min.js"></script>
-  <!-- Main JavaScript -->
+  <!-- Audio -->
+  <audio id="happy-audio" src="assets/music.mp3" preload="auto"></audio>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
