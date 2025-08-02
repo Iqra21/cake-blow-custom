@@ -17,10 +17,10 @@ body {
 
 .candle {
   width: 20px;
-  height: 40px;
+  height: 70px;
   background: red;
   position: absolute;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .digit {
@@ -31,7 +31,7 @@ body {
   position: absolute;
   top: -25px;
   left: 3px;
-  width: 16px;
+  width: 30px;
   height: 30px;
   background: radial-gradient(ellipse at center, orange 0%, yellow 70%, transparent 100%);
   border-radius: 50% 50% 50% 50%;
@@ -73,8 +73,8 @@ body {
 }
 
 .balloon {
-  width: 40px;
-  height: 60px;
+  width: 100px;
+  height: 140px;
   background: #ff99cc;
   border-radius: 50% 50% 50% 50%;
   position: absolute;
