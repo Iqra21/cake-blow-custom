@@ -73,13 +73,26 @@ body {
 }
 
 .balloon {
-  width: 100px;
-  height: 140px;
-  background: #ff99cc;
+  width: 40px;
+  height: 60px;
+  background: linear-gradient(145deg, #fff 5%, var(--color) 40%, var(--color) 90%);
   border-radius: 50% 50% 50% 50%;
   position: absolute;
-  animation: rise 5s ease-out forwards;
+  animation: rise 6s ease-out forwards;
   cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  z-index: 10;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background: #555;
+  transform: translateX(-50%);
 }
 
 @keyframes rise {
