@@ -80,19 +80,16 @@ h1 {
 }
 
 .balloon {
+  width: 400px; /* was smaller */
+  height: 500px; /* make more round */
+  background: radial-gradient(circle at 30% 30%, #ffd700, #ffa500); /* gold-orange shimmer */
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
   position: absolute;
-  width: 120px;
-  height: 180px;
-  background: radial-gradient(circle at 30% 30%, #fff, var(--color));
-  border-radius: 60% 60% 60% 60%;
-  box-shadow: inset -8px -12px 20px rgba(255,255,255,0.4), 0 6px 18px rgba(0,0,0,0.3);
-  animation: floatUp 10s linear forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  color: white;
+  animation: float 6s infinite ease-in-out;
+  z-index: 1;
 }
+
 
 .balloon::after {
   content: "";
