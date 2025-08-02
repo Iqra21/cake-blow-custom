@@ -124,20 +124,21 @@ h1 {
   to { bottom: 110vh; opacity: 1; }
 }
 .string {
-  width: 2px;
-  height: 120px;
-  background: silver;
   position: absolute;
-  bottom: -130px;
+  bottom: -120px;
   left: 50%;
-  transform: translateX(-50%) rotate(15deg);
-  border-radius: 50%;
-  animation: wiggle 2s infinite ease-in-out;
+  width: 4px;
+  height: 120px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, silver, #ccc);
+  border-radius: 20%;
+  animation: curl 3s ease-in-out infinite;
+  z-index: -1;
 }
 
-@keyframes wiggle {
-  0%, 100% { transform: translateX(-50%) rotate(15deg); }
-  50% { transform: translateX(-50%) rotate(-15deg); }
+@keyframes curl {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  50% { transform: translateX(-50%) rotate(10deg); }
 }
 
 #popup {
