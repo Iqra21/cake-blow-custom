@@ -123,6 +123,22 @@ h1 {
   from { bottom: -200px; opacity: 0; }
   to { bottom: 110vh; opacity: 1; }
 }
+.string {
+  width: 2px;
+  height: 120px;
+  background: silver;
+  position: absolute;
+  bottom: -130px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+  border-radius: 50%;
+  animation: wiggle 2s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: translateX(-50%) rotate(15deg); }
+  50% { transform: translateX(-50%) rotate(-15deg); }
+}
 
 #popup {
   display: none;
