@@ -62,13 +62,12 @@ function showBalloons() {
   for (let i = 0; i < 10; i++) {
     const balloon = document.createElement('div');
     balloon.classList.add('balloon');
-    balloon.style.left = `${Math.random() * 100}%`;
-    balloon.style.backgroundColor = randomColor();
+    balloon.style.left = `${Math.random() * 90}%`;
+    balloon.style.setProperty('--color', randomColor());
     balloon.onclick = () => balloon.remove(); // Pop on click
     container.appendChild(balloon);
   }
 
-  // After 6s, show message
   setTimeout(showMessage, 6000);
 }
 
