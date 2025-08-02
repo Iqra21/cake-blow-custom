@@ -1,21 +1,28 @@
 const song = document.getElementById('song');
 const candlesDiv = document.getElementById('candles');
 
-// Add two candles for 29
-const positions = [110, 160];
-positions.forEach(pos => {
+// Custom-shaped digit candles: "2" and "9"
+const digits = ['2', '9'];
+const positions = [110, 160]; // Adjust for perfect horizontal placement
+
+digits.forEach((digit, i) => {
   const candle = document.createElement('div');
   candle.classList.add('candle');
-  candle.style.left = `${pos}px`;
-  candle.style.top = `-60px`;
+  candle.style.left = `${positions[i]}px`;
+  candle.style.top = `-30px`; // Lowered position
 
   const flame = document.createElement('div');
   flame.classList.add('flame');
-  flame.classList.add('on');
+
+  const digitEl = document.createElement('div');
+  digitEl.classList.add('digit');
+  digitEl.textContent = digit;
 
   candle.appendChild(flame);
+  candle.appendChild(digitEl);
   candlesDiv.appendChild(candle);
 });
+
 
 // Microphone detection
 navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
