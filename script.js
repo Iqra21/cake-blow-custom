@@ -68,8 +68,6 @@ function showBalloons() {
     container.appendChild(balloon);
   }
 }
-
-
   setTimeout(showMessage, 8000);
 }
 
