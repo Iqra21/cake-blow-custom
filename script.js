@@ -59,8 +59,16 @@ function showBalloons() {
     balloon.classList.add('balloon');
     balloon.style.left = `${Math.random() * 90}%`;
     balloon.style.setProperty('--color', randomColor());
+
+    // Add curled silver string
+    const string = document.createElement('div');
+    string.classList.add('string');
+    balloon.appendChild(string);
+
     container.appendChild(balloon);
   }
+}
+
 
   setTimeout(showMessage, 8000);
 }
