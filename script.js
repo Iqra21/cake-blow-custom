@@ -1,19 +1,25 @@
-const NUM_CANDLES = 5;
 const candlesDiv = document.getElementById('candles');
 
-// Add candles with flames
-for (let i = 0; i < NUM_CANDLES; i++) {
+// Create a custom 2 and 9
+const positions = [100, 160]; // adjust depending on cake width
+const digits = ['2', '9'];
+
+digits.forEach((digit, i) => {
   const candle = document.createElement('div');
-  candle.classList.add('candle');
-  candle.style.left = `${60 + i * 30}px`; // Spread across the cake
+  candle.classList.add('candle', 'digit-candle');
+  candle.style.left = `${positions[i]}px`;
+
+  const number = document.createElement('div');
+  number.classList.add('digit');
+  number.textContent = digit;
 
   const flame = document.createElement('div');
-  flame.classList.add('flame');
-  flame.classList.add('on');
+  flame.classList.add('flame', 'big');
 
   candle.appendChild(flame);
+  candle.appendChild(number);
   candlesDiv.appendChild(candle);
-}
+});
 
 // Audio
 const song = document.getElementById('song');
