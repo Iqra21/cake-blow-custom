@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cake Blow 🎂</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blow the Birthday Candles!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icon.png">
 </head>
 <body>
-  <h1>🎉 Blow the Candles! 🎉</h1>
-  <div id="cake-container">
-    <img src="BDAY CAKE.jpeg" alt="Cake" id="cake" />
-    <div id="candles"></div>
+  <div class="container">
+    <h1>🎂 Happy Birthday 🎉</h1>
+    <div id="cake-container">
+      <img id="cake" src="assets/cake.png" alt="Birthday Cake">
+      <div id="candles"></div>
+    </div>
+    <div class="buttons">
+      <button id="add-candle">Add Candle</button>
+      <button id="blow-candles">Blow Candles</button>
+    </div>
+    <audio id="birthday-audio" src="assets/birthday.mp3"></audio>
   </div>
 
-  <div class="controls">
-    <button onclick="addCandle()">Add Candle</button>
-    <button onclick="generateLink()">Share Cake</button>
-  </div>
-
-  <p id="share-link"></p>
-
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script src="script.js"></script>
-  <audio id="birthday-audio" src="happy-birthday.mp3"></audio>
+  <!-- Confetti script -->
+  <script src="confetti.min.js"></script>
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
