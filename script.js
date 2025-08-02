@@ -66,7 +66,7 @@ function showBalloons() {
   for (let i = 0; i < 7; i++) {
     const balloon = document.createElement('div');
     balloon.classList.add('balloon');
-    balloon.style.left = `${Math.random() * 90}%`;
+    balloon.style.left = `calc(${Math.random() * 90}% - 200px)`; // half width offset
     balloon.style.setProperty('--color', randomColor());
 
     const string = document.createElement('div');
