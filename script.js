@@ -22,6 +22,15 @@ window.onload = function () {
     }
   }
   startMicListening(); // Start mic on page load
+  // Play music on user interaction
+document.body.addEventListener("click", function playMusicOnce() {
+  const audio = document.getElementById("birthday-audio");
+  audio.play().catch((e) => {
+    console.log("Autoplay blocked until user interacts");
+  });
+  // Remove listener so it plays only once
+  document.body.removeEventListener("click", playMusicOnce);
+});
 };
 
 // Generate sharable URL
