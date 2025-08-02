@@ -17,26 +17,26 @@ body {
 
 .candle {
   width: 20px;
-  height: 70px;
+  height: 40px;
   background: red;
   position: absolute;
-  border-radius: 6px;
+  border-radius: 4px;
+  top: -30px; /* lowered ~30px from before */
 }
-
 .digit {
   display: none; /* We're using shape-based candles */
 }
 
 .flame {
   position: absolute;
-  top: -25px;
-  left: 3px;
-  width: 30px;
-  height: 30px;
-  background: radial-gradient(ellipse at center, orange 0%, yellow 70%, transparent 100%);
-  border-radius: 50% 50% 50% 50%;
-  transform: rotate(20deg);
+  top: -40px;
+  left: 4px;
+  width: 8px;
+  height: 28px;
+  background: linear-gradient(to top, orange 0%, yellow 70%, transparent 100%);
+  border-radius: 50% 50% 20% 20%;
   animation: flicker 0.2s infinite alternate;
+  transform: rotate(0deg);
 }
 
 @keyframes flicker {
