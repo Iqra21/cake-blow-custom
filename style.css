@@ -147,21 +147,6 @@ h1 {
   50% { transform: translateX(-50%) rotate(10deg); }
 }
 
-#popup {
-  display: none;
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff3e0;
-  border: 3px solid #f06292;
-  padding: 30px 50px;
-  font-size: 32px;
-  color: #c2185b;
-  border-radius: 20px;
-  z-index: 100;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
 #banner {
   position: fixed;
   top: 50%;
