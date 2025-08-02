@@ -119,9 +119,15 @@ h1 {
   50% { opacity: 1; }
 }
 
-@keyframes floatUp {
-  from { bottom: -200px; opacity: 0; }
-  to { bottom: 110vh; opacity: 1; }
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(4deg);
+    opacity: 1;
+  }
 }
 .string {
   position: absolute;
