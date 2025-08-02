@@ -1,36 +1,88 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background: #fbe7e7;
+  overflow-x: hidden;
+}
+
+#cake-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+#cake {
+  width: 300px;
+}
+
 .candle {
-  width: 30px;
-  height: 60px;
+  width: 20px;
+  height: 40px;
+  background: red;
   position: absolute;
-  top: 20px;
+  border-radius: 4px;
+}
+
+.digit {
+  display: none; /* We're using shape-based candles */
 }
 
 .flame {
-  width: 15px;
-  height: 15px;
-  background: gold;
-  border-radius: 50%;
   position: absolute;
-  top: -20px;
-  left: 8px;
+  top: -25px;
+  left: 3px;
+  width: 16px;
+  height: 30px;
+  background: radial-gradient(ellipse at center, orange 0%, yellow 70%, transparent 100%);
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(20deg);
   animation: flicker 0.2s infinite alternate;
 }
 
-.flame.big {
-  width: 25px;
-  height: 25px;
-  top: -30px;
-  left: 2px;
+@keyframes flicker {
+  0% { transform: scale(1) rotate(20deg); opacity: 1; }
+  100% { transform: scale(1.1) rotate(22deg); opacity: 0.8; }
 }
 
-.digit-candle .digit {
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  background: #ff8c00;
-  padding: 4px 6px;
-  border-radius: 5px;
-  position: relative;
-  top: 10px;
-  text-align: center;
+#popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #e60073;
+  border: 3px solid #ff3399;
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 28px;
+  z-index: 999;
+  animation: popupFade 1s ease forwards;
+}
+
+@keyframes popupFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#balloon-container {
+  position: fixed;
+  bottom: -100px;
+  width: 100%;
+  z-index: 10;
+}
+
+.balloon {
+  width: 40px;
+  height: 60px;
+  background: #ff99cc;
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  animation: rise 5s ease-out forwards;
+  cursor: pointer;
+}
+
+@keyframes rise {
+  0% { bottom: -100px; }
+  100% { bottom: 100vh; }
 }
