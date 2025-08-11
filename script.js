@@ -1,8 +1,8 @@
 const song = document.getElementById('song');
 const candlesDiv = document.getElementById('candles');
 
-// Create candles: digit 2 and 9
-['2', '9'].forEach(digit => {
+// Create candles: digit 2 and 4
+['2', '4'].forEach(digit => {
   const candle = document.createElement('div');
   candle.classList.add('candle');
 
